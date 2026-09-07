@@ -1,8 +1,62 @@
+.ft-bar {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  border: 1px solid rgb(255 255 255 / 38%);
+  border-radius: 18px;
+  color: rgb(255 255 255 / 96%);
+  background: rgb(255 255 255 / 20%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 52%),
+    inset 0 -1px 0 rgb(255 255 255 / 14%),
+    0 6px 22px rgb(0 0 0 / 14%);
+  backdrop-filter: blur(16px) saturate(165%) brightness(1.08);
+  -webkit-backdrop-filter: blur(16px) saturate(165%) brightness(1.08);
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.ft-bar::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  border-radius: inherit;
+  z-index: 0;
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 24%),
+    transparent 42%,
+    rgb(255 255 255 / 7%)
+  );
+}
+
 .ft-bar[data-there-is-maximized-on-background="true"] {
   color: white;
   background: var(--window-gradient);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-.ft-bar[data-there-is-maximized-on-background="true"] .ft-bar-item {
-  filter: drop-shadow(0 0 1px #000);
+.ft-bar[data-there-is-maximized-on-background="true"]::before {
+  display: none;
+}
+
+.ft-bar > *:not(.bg-layers) {
+  position: relative;
+  z-index: 1;
+}
+
+.ft-bar .ft-bar-item {
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 42%));
+}
+
+.ft-bar .ft-bar-item-clickable:hover {
+  background: rgb(255 255 255 / 14%);
+}
+
+.ft-bar .ft-bar-item-clickable:active {
+  background: rgb(255 255 255 / 20%);
 }
