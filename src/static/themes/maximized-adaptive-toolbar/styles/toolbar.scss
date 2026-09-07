@@ -3,7 +3,6 @@
   isolation: isolate;
   box-sizing: border-box;
   border: 1px solid rgb(255 255 255 / 38%);
-  border-radius: 18px;
   color: rgb(255 255 255 / 96%);
   background: rgb(255 255 255 / 20%);
   box-shadow:
@@ -23,7 +22,6 @@
   inset: 0;
   pointer-events: none;
   content: "";
-  border-radius: inherit;
   z-index: 0;
   background: linear-gradient(
     135deg,
