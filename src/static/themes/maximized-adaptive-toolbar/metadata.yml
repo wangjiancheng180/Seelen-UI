@@ -1,0 +1,13 @@
+id: "@wangjiancheng180/maximized-adaptive-toolbar"
+
+metadata:
+  displayName: !extend i18n/display_name.yml
+  description: !extend i18n/description.yml
+  tags:
+    - toolbar
+    - adaptive
+    - maximized
+  appTargetVersion: [2, 8, 3]
+
+styles:
+  "@seelen/fancy-toolbar": !include styles/toolbar.scss

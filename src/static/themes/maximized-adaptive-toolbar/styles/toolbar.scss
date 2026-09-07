@@ -1,0 +1,8 @@
+.ft-bar[data-there-is-maximized-on-background="true"] {
+  color: white;
+  background: var(--window-gradient);
+}
+
+.ft-bar[data-there-is-maximized-on-background="true"] .ft-bar-item {
+  filter: drop-shadow(0 0 1px #000);
+}
